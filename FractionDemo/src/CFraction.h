@@ -16,8 +16,8 @@ public:
 	void writeln();
 
 private:
-	int m_numerator;
-	int m_denumerator;
+	int *mp_numerator;
+	int *mp_denumerator;
 };
 
 #endif /* CFRACTION_H_ */
