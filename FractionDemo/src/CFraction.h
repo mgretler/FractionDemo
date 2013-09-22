@@ -13,6 +13,7 @@ public:
 	CFraction();
 	virtual ~CFraction();
 	CFraction(int num, int den);
+	CFraction(const CFraction &fraction);
 	void writeln();
 
 private:
