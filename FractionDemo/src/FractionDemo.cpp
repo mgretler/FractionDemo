@@ -21,5 +21,9 @@ int main() {
 	zahl3.writeln();
 	zahl4.writeln();
 
+	// Test zu Aufgabe 5
+	CFraction aFraction;
+	aFraction = CFraction(13, 42);
+
 	return 0;
 }
