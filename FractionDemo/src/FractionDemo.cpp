@@ -11,13 +11,15 @@ using namespace std;
 #include "CFraction.h"
 
 int main() {
-	CFraction zahl1(3, 4);
-	CFraction zahl2;
-	CFraction zahl3(zahl1);
+	CFraction zahl1(3, 4);		// mit Übergabeparametern
+	CFraction zahl2;			// mit Standardwerten initialisieren
+	CFraction zahl3(zahl1);		// als Copy Konstruktor
+	CFraction zahl4 = zahl2;			// mit Zuweisungsoperator
 
 	zahl1.writeln();
 	zahl2.writeln();
 	zahl3.writeln();
+	zahl4.writeln();
 
 	return 0;
 }

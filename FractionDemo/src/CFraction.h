@@ -14,6 +14,8 @@ public:
 	virtual ~CFraction();
 	CFraction(int num, int den);
 	CFraction(const CFraction &fraction);
+	CFraction& operator=(const CFraction &fraction);
+
 	void writeln();
 
 private:

@@ -42,6 +42,20 @@ CFraction::CFraction(const CFraction &fraction) {
 	clog << "Num: " << *mp_numerator << ", Den: " << *mp_denumerator << endl;
 
 }
+
+CFraction& CFraction::operator =(const CFraction& fraction) {
+	mp_numerator = new int();
+	mp_denumerator = new int();
+
+	*mp_numerator = *fraction.mp_numerator;
+	*mp_denumerator = *fraction.mp_denumerator;
+	clog << "Num: " << *mp_numerator << ", Den: " << *mp_denumerator << endl;
+
+	return *this;
+}
+
 void CFraction::writeln() {
 	cout << "Num: " << *mp_numerator << ", Den: " << *mp_denumerator << endl;
 }
+
+
