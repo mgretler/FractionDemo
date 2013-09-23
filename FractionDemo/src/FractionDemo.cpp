@@ -14,7 +14,7 @@ int main() {
 	CFraction zahl1(3, 4);		// mit Übergabeparametern
 	CFraction zahl2;			// mit Standardwerten initialisieren
 	CFraction zahl3(zahl1);		// als Copy Konstruktor
-	CFraction zahl4 = zahl2;			// mit Zuweisungsoperator
+	CFraction zahl4 = zahl2;	// mit Zuweisungsoperator
 
 	zahl1.writeln();
 	zahl2.writeln();
@@ -24,6 +24,18 @@ int main() {
 	// Test zu Aufgabe 5
 	CFraction aFraction;
 	aFraction = CFraction(13, 42);
+	aFraction.writeln();
+
+	// Aufgabe 7
+	CFraction a(3, 5), b(7, 9), c;
+	a.writeln();
+	b.writeln();
+	c = a + b;
+	c.writeln();
+	c += b;
+	c.writeln();
+
+	cout << "c= " << c;
 
 	return 0;
 }

@@ -4,6 +4,7 @@
  *  Created on: 16.09.2013
  *      Author: Markus
  */
+#include <iostream>
 
 #ifndef CFRACTION_H_
 #define CFRACTION_H_
@@ -13,9 +14,12 @@ public:
 	CFraction();
 	virtual ~CFraction();
 	CFraction(int num, int den);
-	CFraction(const CFraction &fraction);
-	CFraction& operator=(const CFraction &fraction);
+	CFraction(const CFraction& fraction);
+	CFraction& operator =(const CFraction& fraction);
+	CFraction operator +(const CFraction& fraction);
+	CFraction& operator +=(const CFraction& fraction);
 
+	friend std::ostream& operator <<(std::ostream& o, const CFraction& cf);
 	void writeln();
 
 private:
