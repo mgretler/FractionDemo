@@ -64,16 +64,16 @@ CFraction& CFraction::operator +=(const CFraction& fraction) {
 
 CFraction CFraction::operator +(const CFraction& fraction) {
 
-	int num = *this->mp_numerator + *fraction.mp_numerator;
-	int den = *this->mp_denumerator + *fraction.mp_denumerator;
+	int num = *this->mp_numerator * *fraction.mp_denumerator + *this->mp_denumerator * *fraction.mp_numerator;
+	int den = *this->mp_denumerator * *fraction.mp_denumerator;
 
 	return CFraction(num, den);
 }
 
 CFraction CFraction::operator -(const CFraction& fraction) {
 
-	int num = *this->mp_numerator - *fraction.mp_numerator;
-	int den = *this->mp_denumerator - *fraction.mp_denumerator;
+	int num = *this->mp_numerator * *fraction.mp_denumerator - *this->mp_denumerator * *fraction.mp_numerator;
+	int den = *this->mp_denumerator * *fraction.mp_denumerator;
 
 	return CFraction(num, den);
 }
@@ -88,8 +88,8 @@ CFraction CFraction::operator *(const CFraction& fraction) {
 
 CFraction CFraction::operator /(const CFraction& fraction) {
 
-	int num = *this->mp_numerator / *fraction.mp_numerator;
-	int den = *this->mp_denumerator / *fraction.mp_denumerator;
+	int num = *this->mp_numerator * *fraction.mp_denumerator;
+	int den = *this->mp_denumerator * *fraction.mp_numerator;
 
 	return CFraction(num, den);
 }
