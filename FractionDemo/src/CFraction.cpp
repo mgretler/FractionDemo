@@ -70,11 +70,34 @@ CFraction CFraction::operator +(const CFraction& fraction) {
 	return CFraction(num, den);
 }
 
+CFraction CFraction::operator -(const CFraction& fraction) {
+
+	int num = *this->mp_numerator - *fraction.mp_numerator;
+	int den = *this->mp_denumerator - *fraction.mp_denumerator;
+
+	return CFraction(num, den);
+}
+
+CFraction CFraction::operator *(const CFraction& fraction) {
+
+	int num = *this->mp_numerator * *fraction.mp_numerator;
+	int den = *this->mp_denumerator * *fraction.mp_denumerator;
+
+	return CFraction(num, den);
+}
+
+CFraction CFraction::operator /(const CFraction& fraction) {
+
+	int num = *this->mp_numerator / *fraction.mp_numerator;
+	int den = *this->mp_denumerator / *fraction.mp_denumerator;
+
+	return CFraction(num, den);
+}
+
 ostream& operator <<(ostream& o, const CFraction& cf) {
 	return o << "Num: " << *cf.mp_numerator << ", Den: " << *cf.mp_denumerator
 			<< endl;
 }
-
 void CFraction::writeln() {
 	cout << "Num: " << *mp_numerator << ", Den: " << *mp_denumerator << endl;
 }

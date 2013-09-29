@@ -27,7 +27,7 @@ int main() {
 	aFraction.writeln();
 
 	// Aufgabe 7
-	CFraction a(3, 5), b(7, 9), c;
+	CFraction a(3, 5), b(1, 7), c;
 	a.writeln();
 	b.writeln();
 	c = a + b;
@@ -36,6 +36,15 @@ int main() {
 	c.writeln();
 
 	cout << "c= " << c;
+
+	c = a + b;
+	cout << "a+b=c= " << c;
+	c = a - b;
+	cout << "a-b=c= " << c;
+	c = a * b;
+	cout << "a*b=c= " << c;
+	c = a / b;
+	cout << "a/b=c= " << c;
 
 	return 0;
 }

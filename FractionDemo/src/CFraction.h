@@ -17,6 +17,10 @@ public:
 	CFraction(const CFraction& fraction);
 	CFraction& operator =(const CFraction& fraction);
 	CFraction operator +(const CFraction& fraction);
+	CFraction operator -(const CFraction& fraction);
+	CFraction operator *(const CFraction& fraction);
+	CFraction operator /(const CFraction& fraction);
+
 	CFraction& operator +=(const CFraction& fraction);
 
 	friend std::ostream& operator <<(std::ostream& o, const CFraction& cf);
