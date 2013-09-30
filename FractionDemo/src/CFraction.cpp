@@ -56,8 +56,11 @@ CFraction& CFraction::operator =(const CFraction& fraction) {
 
 CFraction& CFraction::operator +=(const CFraction& fraction) {
 
-	*this->mp_numerator += *fraction.mp_numerator;
-	*this->mp_denumerator += *fraction.mp_denumerator;
+	int num = *this->mp_numerator * *fraction.mp_denumerator + *this->mp_denumerator * *fraction.mp_numerator;
+	int den = *this->mp_denumerator * *fraction.mp_denumerator;
+
+	*this->mp_numerator = num;
+	*this->mp_denumerator = den;
 
 	return *this;
 }
